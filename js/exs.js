@@ -34,9 +34,49 @@ function objects() {
     price: 1.99,
     colors: ["vermelho", "azul", "verde"],
   };
-  
+
   console.log(product.price);
   console.log(product.colors[2]);
   product.price = 2.55;
   console.log(product);
 }
+
+function scooby() {
+  const people = ["Scooby", "Velma", "Daphne", "Shaggy", "Fred"];
+  //ciclo for
+  for (let item of people) {
+    console.log(item.toUpperCase());
+  }
+}
+
+function isSnakeEyes(num1, num2) {
+  if (num1 == 1 && num2 == 1) {
+    console.log("is snake eyyes");
+  } else {
+    console.log("not snake eyyes");
+  }
+}
+
+function mapEx() {
+  const fullNames = [
+    { first: "Albus", last: "Dumbledore" },
+    { first: "Harry", last: "Potter" },
+    { first: "Hermione", last: "Granger" },
+    { first: "Ron", last: "Weasley" },
+    { first: "Rubeus", last: "Hagrid" },
+    { first: "Minerva", last: "McGonagall" },
+    { first: "Severus", last: "Snape" },
+  ];
+
+  const firstNames = fullNames.map(function (element) {
+
+    return element.first;
+  });
+
+  console.log(firstNames);
+}
+
+const greet = (personName = "Lucas") => {
+  console.log("hey " + personName);
+  return personName;
+};
